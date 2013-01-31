@@ -1,0 +1,75 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter{Question 1}
+\section{1)}
+
+On cherche à calculer la longueur d'onde d'un électron qui possède une énergie de 100keV. On utilise premièrement la relation suivante:
+\begin{equation}
+E = \frac{1}{2} m_e v^2
+\end{equation}
+\begin{itemize}
+\item Où $m_e$ est la masse de l'électron en kg
+\item Où E est son énergie en Joules
+\item Où v est sa vitesse en m/s
+\end{itemize}
+
+On a donc que:
+\begin{equation}
+v = \sqrt{\frac{2E}{m}} = \sqrt{\frac{2 \cdot 100\times 10^{3} \cdot 1.602\times 10^{-19}}{0.9109\times 10^{-30}}} = 187.55373\times 10^{6} \left[\frac{m}{s}\right]
+\end{equation}
+
+On trouve par la suite le "momentum" de l'électron au moyen de la relation suivante:
+\begin{equation}
+p = m_e v = 0.9109\times 10^{-30} \cdot 187.55373\times 10^{6} = 170.85\times 10^{-24} \left[\frac{kg \cdot m}{s}\right]
+\end{equation}
+\begin{itemize}
+\item Où p est le "momentum" de l'électron en $\left[\frac{kg \cdot m}{s}\right]$
+\end{itemize}
+
+On utilise ensuite la relation de De Broglie afin de trouver la longueur d'onde de l'électron à 100keV:
+\begin{equation}
+\lambda = \frac{h}{p} = 3.8783 \times 10^{-12} [m] = 3.8783 [pm]
+\end{equation}
+\begin{itemize}
+\item Où $\lambda$ est la longueur d'onde en mètres
+\item Où h est la constante de Planck en $\left[\frac{m^2 \cdot kg}{s}\right]$
+\end{itemize}
+\section{2)}
+Comme la particule est un photon, on emploi l'équation suivante afin de trouver le "momentum":
+\begin{equation}
+p = \frac{E}{c} = \frac{7 \cdot 1.602\times 10^{-19}}{c} = 3.741\times 10^{-27} \left[\frac{kg \cdot m}{s}\right]
+\end{equation}
+\begin{itemize}
+\item Où c est la vitesse de la lumière en $\left[\frac{m}{s}\right]$
+\end{itemize}
+
+On utilise par la suite la même relation qu'à la question 1 pour trouver la longueur d'onde
+\begin{equation}
+\lambda = \frac{h}{p} = \frac{h}{3.741\times 10^{-27}} = 177.12\times 10^{-9} = 177.12nm
+\end{equation}
+\section{3)}
+Si on prend pour acquis que la puissance correspond à la vitesse multipliée par la force, on peut diviser la puissance du faisceau par la vitesse des électrons (en a)) et des photons (en b)) afin de déterminer la force exercée.
+
+\begin{equation}
+F_{electrons} = W/v_e = \frac{2 \times 10^9}{187.55373\times 10^{6}} = 10.66N
+\end{equation}
+\begin{itemize}
+\item Où $v_e$ est la vitesse des électrons en $\left[\frac{m}{s}\right]$
+\end{itemize}
+
+\begin{equation}
+F_{photons} = W/v_{c} = \frac{2 \times 10^9}{c} = 6.67N
+\end{equation}
+\chapter{Question 2}
+\section{Électronique à commande optique}
+L'idée consiste à développer un dispositif de commutation électronique qui est commandé par un faiseau optique, sans l'apport d'énergie électrique afin de réaliser des dispositifs électroniques avec un rendement qui permettrait la portabilité de systèmes plus gourmands en énergie. L'idée est jointe au développement d'un accumulateur "optique" qui pourrait, au moyen du principe de réflexion totale interne ou au moyen d'une réfraction bien calculée, utiliser l'énergie sous forme lumineuse afin de commuter ou d'amplifier des signaux. Optimalement, on peut réénergiser les photons au moyen des champs électriques "parasites" localisés près des composantes lorsqu'ils ont été employés pour commuter ou amplifier. De ce fait, la réutilisation d'une portion de l'énergie permettrait d'obtenir des rendement de loin supérieurs aux rendement existants.
+\section{Système d'accumulateur recharché au laser pour automobiles}
+Le projet consiste développer une méthode selon laquelle il serait possible d'utiliser une automobile avec un moteur électrique qui dispose d'un système d'alimentation à batterie rechargée au laser (par un faisceau à distance). Le génie derrière la technologie serait de développer un système qui permettrait d'énergiser des automobiles en mouvement de manière à assurer un mouvement continuel, sans besoin d'arrêt à de points fixes. Idéalement, les lieux de générations seraient alimentés par des sources autonomnes non reliées.   
