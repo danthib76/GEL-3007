@@ -1,0 +1,42 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter{Question 1}
+\section{a)}
+
+On cherche à calculer la position du niveau de Fermi pour les trous et pour les électrons. La quantité $k_B T$ est égale a 26meV dans des conditions normales. Pour le GaAs, on a que les paramètres $N_c$ et $N_v$ des équations \ref{eq1} et \ref{eq2} sont respectivement égal à $4.7\times 10^{23}/m^3$ et à $7.0\times 10^{24}/m^3$. Les quantités n et p sont toutes deux égales à $9.0\times 10^{24}\left[\frac{electrons}{m^3}\right]$. 
+\begin{align}
+\label{eq1}
+E_{Fn} - E_c &= k_B T\left(\ln\left(\frac{n}{N_c}\right) + 0.353 \frac{n}{N_c}\right)\\
+\label{eq2}
+E_{v} - E_{Fp} &= k_B T\left(\ln\left(\frac{p}{N_v}\right) + 0.353 \frac{p}{N_v}\right)
+\end{align}
+\begin{itemize}
+\item Où $E_{Fn}$ est le niveau de Fermi des électrons en [J]
+\item Où $E_{Fp}$ est le niveau de Fermi des trous en [J]
+\item Où $N_c$ est la densité effective d'états des électrons en $\left[\frac{états}{m^3}\right]$
+\item Où $N_v$ est la densité effective d'états des trous en $\left[\frac{états}{m^3}\right]$
+\end{itemize}
+
+On a alors que le niveau de Fermi pour les électrons est donné par:
+\begin{equation}
+E_{Fn} - E_c  = 26meV \left( 2.9522 + 6.76\right) = 252.5meV
+\end{equation}
+
+Et le niveau de Fermi pour les trous est donné par:
+
+\begin{equation}
+E_{v} - E_{Fp} = 26meV \left( 0.2513 + 0.4539 \right) =18.3meV
+\end{equation}
+
+\section{b)}
+En termes d'énergie, on a que selon la condition de Bernard-Duraffourg $E_{Fn} - E_{Fp} \geq E_c - E_v \geq E_g \geq hf$ Dans le cas étudié, on a que $E_{Fn} - E_{Fp} = E_g + 252.5meV + 18.3meV = 1.6945eV$. On sait donc que le GaAs pourra laser de 1.424eV à 1.6945eV, soit une plage de longueur d'onde allant de 732.192[nm] à 870.675[nm]
+
+\section{c)}
