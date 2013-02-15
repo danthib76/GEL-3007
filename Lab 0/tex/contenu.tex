@@ -56,18 +56,88 @@ On utilise par la suite la même relation qu'à la question 1 pour trouver la lo
 \lambda = \frac{h}{p} = \frac{h}{3.741\times 10^{-27}} = 177.12\times 10^{-9} = 177.12nm
 \end{equation}
 \section{3)}
-Si on prend pour acquis que la puissance correspond à la vitesse multipliée par la force, on peut diviser la puissance du faisceau par la vitesse des électrons (en a)) et des photons (en b)) afin de déterminer la force exercée.
+On sait que la puissance du faisceau est de 2GW. On a aussi que la durée du faisceau est de 1 s. On connaît d'ailleurs l'énergie des électrons. On utilise donc la puissance du laser afin de déterminer le nombre d'électrons et on effectue la somme des momentums de chacun. Par la suite, il suffit de supposer que le momentum des électrons varie en 1 seconde afin de déterminer l'accélération et ainsi la force.
 
 \begin{equation}
-F_{electrons} = W/v_e = \frac{2 \times 10^9}{187.55373\times 10^{6}} = 10.66N
+P_{e} = \frac{E_{e}}{t} = \frac{100 \times 10^3 \left[keV\right]}{1 \left[s\right]} = \frac{100 \times 10^3 \cdot 1.602\times 10^{-19} \left[\frac{J}{eV}\right]}{1 \left[s\right]} = 1.602\times 10^{-14}\left[\frac{W}{électron}\right]
 \end{equation}
 \begin{itemize}
-\item Où $v_e$ est la vitesse des électrons en $\left[\frac{m}{s}\right]$
+\item $P_{e}$ est la puissance d'un électron en [W]
+\item $E_{e}$ est l'énergie d'un électron en [J]
+\item t est le temps
+\end{itemize}
+On a par la suite que:
+\begin{equation}
+N = \frac{P_t}{P_e} = \frac{2 \times 10^{9}}{1.602\times 10^{-14}} = 1.2484\times 10^{23}\left[électron\right]
+\end{equation}
+
+\begin{itemize}
+\item Où N est le nombre d'électrons
+\item Où $P_t$ est la puissance totale du faisceau en [W]
 \end{itemize}
 
+Des développements faits au numéro 1, on a que
 \begin{equation}
-F_{photons} = W/v_{c} = \frac{2 \times 10^9}{c} = 6.67N
+p = 170.85\times 10^{-24}\left[\frac{kg \cdot m}{s}\right]
 \end{equation}
+
+On peut trouver le momentum de l'ensemble des électrons du faisceau:
+\begin{equation}
+p_{T} = \sum_{N} p = Np = 1.2484\times 10^{23} \cdot 170.85\times 10^{-24} = 21.33\left[\frac{kg \cdot m}{s}\right]
+\end{equation}
+\begin{itemize}
+\item Où $p_{T}$ est le momentum total
+\end{itemize}
+
+On trouve ainsi $F_e$
+\begin{equation}
+F_{e} = \frac{21.33 \left[\frac{kg \cdot m}{s}\right]}{1 s} = 21.33\left[N\right]
+\end{equation}
+\begin{itemize}
+\item Où $F_{e}$ est la force de l'ensemble des électrons du faisceau [N]
+\end{itemize}
+
+
+On cherche maintenant la force de l'ensemble des photons du faiseau. On procède avec un développement analogue au développement précédent.
+
+\begin{equation}
+P_{c} = \frac{E_{c}}{t} = \frac{7 \left[eV\right]}{1 \left[s\right]} = \frac{7 \cdot 1.602\times 10^{-19} \left[\frac{J}{eV}\right]}{1 \left[s\right]} = 1.1214\times 10^{-18}\left[\frac{W}{électron}\right]
+\end{equation}
+\begin{itemize}
+\item $P_{c}$ est la puissance d'un photon en [W]
+\item $E_{c}$ est l'énergie d'un photon en [J]
+\end{itemize}
+On a par la suite que:
+\begin{equation}
+N_c = \frac{P_t}{P_c} = \frac{2 \times 10^{9}}{1.1214\times 10^{-18}} = 1.7835\times 10^{27}\left[photons\right]
+\end{equation}
+
+\begin{itemize}
+\item Où $N_c$ est le nombre de photons
+\end{itemize}
+
+Des développements faits au numéro 2, on a que
+\begin{equation}
+p_c = 3.741\times 10^{-27} \left[\frac{kg \cdot m}{s}\right]
+\end{equation}
+\begin{itemize}
+\item Où $p_c$ est le momentum des photons $\left[\frac{kg \cdot m}{s}\right]$
+\end{itemize}
+
+On peut trouver le momentum de l'ensemble des photons du faisceau:
+\begin{equation}
+p_{T} = \sum_{N_c} p_c = N_cp_c = 1.7835\times 10^{27} \cdot 3.741\times 10^{-27} = 6.67\left[\frac{kg \cdot m}{s}\right]
+\end{equation}
+
+
+On trouve ainsi $F_c$
+\begin{equation}
+F_{c} = \frac{6.67 \left[\frac{kg \cdot m}{s}\right]}{1 s} = 6.67\left[N\right]
+\end{equation}
+\begin{itemize}
+\item Où $F_{c}$ est la force de l'ensemble des photons du faisceau [N]
+\end{itemize}
+
 \chapter{Question 2}
 \section{Électronique à commande optique}
 L'idée consiste à développer un dispositif de commutation électronique qui est commandé par un faiseau optique, sans l'apport d'énergie électrique afin de réaliser des dispositifs électroniques avec un rendement qui permettrait la portabilité de systèmes plus gourmands en énergie. L'idée est jointe au développement d'un accumulateur "optique" qui pourrait, au moyen du principe de réflexion totale interne ou au moyen d'une réfraction bien calculée, utiliser l'énergie sous forme lumineuse afin de commuter ou d'amplifier des signaux. Optimalement, on peut réénergiser les photons au moyen des champs électriques "parasites" localisés près des composantes lorsqu'ils ont été employés pour commuter ou amplifier. De ce fait, la réutilisation d'une portion de l'énergie permettrait d'obtenir des rendement de loin supérieurs aux rendement existants.
