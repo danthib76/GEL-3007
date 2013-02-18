@@ -40,12 +40,15 @@ E_{v} - E_{Fp} = 26meV \left( 0.2513 + 0.4539 \right) =18.3meV
 En termes d'énergie, on a que selon la condition de Bernard-Duraffourg $E_{Fn} - E_{Fp} \geq E_c - E_v \geq E_g \geq hf$ Dans le cas étudié, on a que $E_{Fn} - E_{Fp} = E_g + 252.5meV + 18.3meV = 1.6945eV$. On sait donc que le GaAs pourra laser de 1.424eV à 1.6945eV, soit une plage de longueur d'onde allant de 732.192[nm] à 870.675[nm]
 
 \section{c)}
-On calcule premièrement l'énergie fournie par le laser qui sert à pomper la lame d'GaAs:
-
+On cherche à connaître la population minimale d'électrons et de trous qui vont entretenir l'effet laser. Pour se faire, on emploie les deux équations suivantes, dont les constantes ont été prédéfinies:
 \begin{equation}
-E = \frac{c h}{\lambda} = \frac{c h}{600 \times 10^{-9}}
+n = N_c e^{\frac{E_{fn} - Ec}{k_B T}} \left[\frac{électrons}{cm^3}\right]
+\end{equation}
+\begin{equation}
+p = N_v e^{\frac{E_{v} - E_{fv}}{k_B T}}  \left[\frac{trous}{cm^3}\right]
 \end{equation}
 
+On comprend que la population minimum d'électrons qui peut tout juste entretenir l'effet laser est la population où la densité d'électrons est tout juste suffisante pour situer les niveaux de Fermi respectivement en haut (pour les électrons) et en bas (pour les trous) des bandes de conduction et de valance. Cette population correspond à un niveau de Fermi ''nul'' et donc, à des densités respectivement égales à $4.7\times 10^{17} \left[\frac{électrons}{cm^3}\right]$ pour les électrons (n) et $7.0\times 10^{18} \left[\frac{trous}{cm^3}\right]$ pour les trous (p).
 
 \chapter{Question 2}
 \textit{L'idée qui sera développée est celle du transfert sans fil d'énergie par laser.}
