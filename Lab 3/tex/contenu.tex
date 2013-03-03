@@ -1,0 +1,139 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter{Question 1}
+\section{a)}
+
+On suppose premièrement une pile de 100 microns d'épaisseur. La position des panneaux par rapport au soleil implique que l'incidence de celui-ci ne fournira que $\frac{1}{\sqrt{2}}\times\% = 70.7\%$ de sa puissance maximale. On pose par la suite le constat que 47\% de l'énergie du soleil est absorbée dans la pile de 100 microns. On suppose ensuite l'énergie moyenne de $hf = 1.55eV = 2.48 \times 10^{-19} J$. Si l'on emploie l'approximation que la densité d'énergie fournie par le soleil est $1\left[\frac{kW}{m^2}\right] = 100\left[\frac{mW}{cm^2}\right]$, on a alors que la densité volumique de photons incidents par seconde est donnée par l'équation suivante:
+
+\begin{equation}
+\label{eq0}
+N = \frac{\eta \cos(\phi)P_S}{E} = \frac{0.47 \cdot 0.7071 \cdot 0.1}{2.48 \times 10^{-19}} = 1.34\times 10^{17} \left[\frac{photons}{cm^3 s }\right]
+\end{equation}
+\begin{itemize}
+\item Où N est la densité de photons en $\left[\frac{photons}{cm^3 s }\right]$
+\item Où $\eta$ est le rendement de conversion énergétique
+\item Où $\phi$ est l'angle d'incidence en degrés
+\item Où $P_S$ est la densité de puissance du soleil en $\left[\frac{mW}{cm^2}\right]$
+\item Où E est l'énergie moyenne des photons incidents en Joules
+\end{itemize}
+
+Si l'on emploie 20$\mu s$ comme temps de vie des porteurs de charge minoritaires, on obtient la densité $p_n$ des trous en zone n et des électrons $n_p$ en zone p au moyen du développement suivant:
+
+\begin{equation}
+\label{eq11}
+p_n = n_p = \frac{N t}{V} = \frac{1.34\times 10^{17} \cdot 20 \times 10^{-6} }{100 \times 10^{-6}} = \frac{1.34}{5} \times 10^{17} = 2.68 \times 10^{16}\left[/cm^3\right]
+\end{equation}
+\begin{itemize}
+\item Où t est le temps en secondes
+\item Où L est l'épaisseur en cm
+\end{itemize}
+
+
+
+On cherche à calculer la position du niveau de Fermi pour les trous et pour les électrons. La quantité $k_B T$ est égale a 26meV dans des conditions normales. Pour le Si du problème, on a que les paramètres $N_a$ et $N_d$ des équations \ref{eq1} et \ref{eq2} sont tous deux égal à $10^{16}$ $\left[\frac{électrons}{cm^3}\right]$. Ils seront respectivement égal aux densités de porteurs majortiaires $p_p$ et $n_n$. On emploie par la suite l'équation de Joyce-Dixon avec $k_B T$ = 26meV afin de déterminer les niveaux de Fermi:
+
+\begin{align}
+\label{eq1}
+E_{c} - E_{Fn} &= k_B T\left(\ln\left(\frac{N_c}{N_d}\right) - 0.353 \frac{N_c}{N_d}\right)\\
+\label{eq2}
+E_{Fp} - E_{v} &= k_B T\left(\ln\left(\frac{N_v}{p_n}\right) - 0.353 \frac{N_v}{p_n}\right)
+\end{align}
+\begin{itemize}
+\item Où $E_{Fn}$ est le niveau de Fermi des électrons en [J]
+\item Où $E_{Fp}$ est le niveau de Fermi des trous en [J]
+\item Où $N_c$ est la densité effective d'états des électrons en $\left[\frac{états}{m^3}\right]$
+\item Où $N_v$ est la densité effective d'états des trous en $\left[\frac{états}{m^3}\right]$
+\end{itemize}
+
+On a alors que:
+
+\begin{align}
+E_{c} - E_{Fn} &= 0.026\left(\ln\left(\frac{3.22\times 10^{19}}{10^{16}}\right) - 0.353 \frac{10^{16}}{3.22\times 10^{19}}\right) = 0.21eV\\
+E_{Fp} - E_v   &= 0.026\left(\ln\left(\frac{1.83\times 10^{19}}{2.68 \times 10^{16}}\right) - 0.353 \frac{2.68 \times 10^{16}}{1.83\times 10^{19}}\right) = 0.1697eV
+\end{align}
+
+On a donc que $E_{Fn} - E_{Fp} = 1.12 - 0.21 - 0.1697 = 0.7403eV$. Comme les panneaux sur le mât ont 33 cellules en série, on a donc que la tension en circuit ouvert est de $V_{CO} = 33\times 0.7403 = 24.43 V$.
+
+On trouve par la suite que le courant en court-circuit est donné par la densité de photons par secondes multipliée par la surface totale et par la charge élémentaire. On a donc: 
+
+\begin{equation}
+I_{cc} = N\cdot S \cdot 1.602\times 10^{-19} \left[\frac{C}{s}\right] = 1.34 \times 10^{17} \cdot \frac{3}{33}\times 10^4 \cdot  1.602\times 10^{-19} = 19.52A
+\end{equation}
+
+On trouve ensuite que la puissance électrique de la pile est donnée par:
+\begin{equation}
+P = V_{CO} \times I_{cc} \times f_f =  24.43 \times 19.52 \times 0.65 = 309.9W
+\end{equation}
+
+\section{b)}
+Ce qui diffère de a) est la densité de puissance fournie par le lampadaire qui équivaut à $200\left[\frac{nW}{cm^2}\right]$ au lieu de $100\left[\frac{mW}{cm^2}\right]$, soit 50 000 fois moins. On reprend donc l'équation \ref{eq0}:
+\begin{equation}
+N = \frac{\eta \cos(\phi)P_S}{E} = \frac{0.47 \cdot 0.7071 \cdot 200\times 10^{-9}}{2.48 \times 10^{-19}} = 2.68\times 10^{12} \left[\frac{photons}{cm^3 s }\right]
+\end{equation}
+
+On utilise cette donnée dans l'équation \ref{eq11}:
+\begin{equation}
+p_n = n_p = \frac{N t}{V} = \frac{2.68\times 10^{12} \cdot 20 \times 10^{-6} }{100 \times 10^{-6}} = 5.36 \times 10^{11}\left[/cm^3\right]
+\end{equation}
+
+On applique ensuite les équations \ref{eq1} et \ref{eq2} afin de déterminer les niveaux de Fermi:
+\begin{align}
+E_{c} - E_{Fn} &= 0.026\left(\ln\left(\frac{3.22\times 10^{19}}{10^{16}}\right) - 0.353 \frac{10^{16}}{3.22\times 10^{19}}\right) = 0.21eV\\
+E_{Fp} - E_v   &= 0.026\left(\ln\left(\frac{1.83\times 10^{19}}{5.36 \times 10^{11}}\right) - 0.353 \frac{5.36 \times 10^{11}}{1.83\times 10^{19}}\right) = 0.451eV
+\end{align}
+
+On a donc que $E_{Fn} - E_{Fp} = 1.12 - 0.21 - 0.451 = 0.459eV$. Comme les panneaux sur le mât ont 33 cellules en série, on a donc que la tension en circuit ouvert est de $V_{CO} = 33\times 0.7403 = 15.147 V$.
+
+On trouve par la suite que le courant en court-circuit est donné par la densité de photons par secondes multipliée par la surface totale et par la charge élémentaire. On a donc: 
+
+\begin{equation}
+I_{cc} = N\cdot S \cdot 1.602\times 10^{-19} \left[\frac{C}{s}\right] = 2.68 \times 10^{12} \cdot \frac{3}{33}\times 10^4 \cdot  1.602\times 10^{-19} = 390.91\mu A
+\end{equation}
+
+On trouve ensuite que la puissance électrique de la pile est donnée par:
+\begin{equation}
+P = V_{CO} \times I_{cc} \times f_f =  15.147 \times 390.91\times 10^{-6}\times 0.65 = 3.842mW
+\end{equation}
+
+\section{c)}
+Dans une pile solaire, les électrons promus de la bande de valence à la bande de conduction deviennent des porteurs minoritaires dans la portion dopée p de la jonction. Suivant cela, ils diffusent dans la portion dopée n de la jonction. Les électrons créent donc un courant d'électrons vers la droite si les jonctions sont positionnées horizontalement dans l'ordre p-n.
+
+\paragraph{} À mesure que l'on augmente la quantité de lumière, la quantité de porteurs minoritaires augmente. À mesure les porteurs minoritaires augmentent, on note que le niveau de Fermi $E_{Fp}$ se rapproche de $E_v$. On en conclut donc qu'à mesure que la quantité de lumière et donc, de porteurs minoritaires augmente, les niveaux de Fermi $E_{Fn}$ et $E_{Fp}$ se distancent et le niveau de tension de la pile augmente. On note bien cela au travers des équations \ref{eq0},\ref{eq11}, \ref{eq1} et \ref{eq2}. On remarque que l'augmentation de la quantité de lumière dans l'équation \ref{eq0} augmente la quantité $p_n$ ou $n_p$ dans l'équation \ref{eq11}. Suivant cela, on note qu'une augmentation du paramètre $p_n$ ou $n_p$ fait diminuer la valeur du logarithme naturel de l'équation \ref{eq2}. On constate donc que plus on augmente la quantité de porteurs minoritaires, plus les niveaux de Fermi s'éloignent et plus le niveau de tension augmente.
+
+\chapter{Question 2}
+
+Le projet qui consiste à transmettre de la puissance sans fil en employant un laser jumelé à un satellite synchrone qui permet de réfléchir le rayon vers une centrale solaire de faible puissance dans un environnement éloigné où une alimentation filaire est difficile. 
+
+\paragraph{}Si on prend en compte un projet pilote de 30 logements, dans lequel on estime la consommation pointe de puissance autour de 5kW. On obtient alors une puissance de 150kW, qui doit correspondre à la puissance effective fournie aux 30 usagers. Si l'on considère un panneau solaire dans lequel un injecte les rayons laser, il est actuellement possible d'obtenir des rendements de l'ordre de 80\% de conversion. Suivant cela, on doit donc fournir $\frac{150}{0.8} = 187.5 \left[kW\right]$ au panneau. Si l'on suppose que le signal incident de l'espace a la même densité d'énergie que le soleil (environ $1\left[\frac{kW}{m^2}\right]$), avec une longueur d'onde minimale de 1.5$\mu m$ (eye safe), on a une énergie moyenne par photon de 826.67meV ou 1.324 $\times 10^{-19} J$. On obtient donc le débit de photons par unité de surface en employant l'équation \ref{eq0} selon le développement suivant:
+
+\begin{equation}
+N = \frac{(0.8 \times 0.1)}{1.324\times 10^{-19}} = 6.04\times 10^{17} \left[\frac{photons}{s cm^2}\right]
+\end{equation}
+
+Si on exploite les données du problème développé à la question 1 afin d'obtenir un ordre de grandeur, on suppose une densité de porteurs minoritaires selon l'équation \ref{eq11}:
+\begin{equation}
+p_n = \frac{6.04\times 10^{17} \cdot 20 \times 10^{-6}}{0.01} = 1.21\times 10^{14}\left[\frac{photons}{cm^3}\right]
+\end{equation}
+
+Toujours avec les données de la question 1, on obtient des niveaux de Fermi de 0.108eV et de:
+\begin{equation}
+E_{Fp} - Ev = 0.026\cdot\ln\left(\frac{1.83\times 10^{19}}{1.21\times 10^{14}}\right) = 0.2503eV
+\end{equation}
+
+On aurait donc un voltage de 1.12- 0.108 - 0.2503 = 0.761 V. Si l'on désire un voltage en circuit ouvert de 310V pour compenser les pertes de conversion ($\approx 10V$) et le point d'opération de la pile ($\approx 80\%$ du voltage maximal) avec le fill factor de 0.65 du problème 1 , on aura donc environ 410 cellules solaires en série. Si un particulier consomme 5kW à 240VAC, on aura donc besoin d'environ 21A en pointe, pour chacune des résidences. Selon le fill factor de 0.65, 21A correspond donc à 80\% du courant effectif, on devra donc dimensionner les panneaux de manière à fournir 26.25A en court circuit. Soit un total d'environ 800A. Avec un débit de $6.04\times 10^{17} \left[\frac{photons}{s cm^2}\right]$ et un courant en court-circuit de 800A, on cherche la surface (en $cm^2$) que doit avoir une cellule:
+\begin{equation}
+S = \frac{800}{6.04\times 10^{17} \cdot 1.602 \times 10^{-19}} = 81 378 cm^2
+\end{equation}
+
+On obtient donc un carré de 2.85m de côté. Avec 410 cellules, on aurait approximativement 3336$m^2$ de panneau solaire, soit environ $57.8m \times 57.8m$. Cette dimension correspond à un demi terrain de football et est physiquement réalisable. La puissance totale théorique serait alors de $800\cdot 310\cdot0.65 = 161kW$, des pertes de transformation de 7\% sont une approximation valable.
+
+\paragraph{}Si on suppose que le satellite possède les mêmes dimensions que les panneaux terrestres, le projet semble physiquement réalisable. 
+\paragraph{}Pour ce qui est du laser émetteur, on considère des pertes de l'ordre de 10\% dans le transport et donc, un rendement total de 70\%. Sachant que l'on dimensionne le panneau pour une puissance de 161kW, il nous faudra un laser de 230kW. La consultation de ressources sur le web nous indique que des lasers à fibre peuvent atteindre des puissances de 20kW et fonctionnent avec la longueur d'onde désirée. Seulement quelques lasers (12) seraient nécessaires pour le projet pilote. 
