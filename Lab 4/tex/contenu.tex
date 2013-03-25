@@ -1,0 +1,52 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter*{Question 1}
+\section*{a)}
+
+On cherche à identifier $\beta$, pour ce faire, nous avons l'équation suivante:
+\begin{equation}
+\beta = \frac{D_n N_{de} X_e}{D_p N_{ab}W}
+\end{equation}
+Où
+\begin{itemize}
+\item $\beta$ est le gain en courant du transistor;
+\item $D_n$ est le coefficient de diffusion des électrons;
+\item $D_p$ est le coefficient de diffusion des trous;
+\item $N_{de}$ est la densité de donneurs dans l'émetteur;
+\item $N_{ab}$ est la densité d'accepteurs dans la base;
+\item $X_e$ est l'épaisseur de l'émetteur;
+\item W est l'épaisseur de la base.
+\end{itemize}
+
+On a alors que:
+\begin{equation}
+\beta = \frac{37.5\cdot 1.7\times 10^{19}\cdot 0.75\times 10^{-4}}{13 \cdot 1.7\times 10^{17} \cdot 0.8\times 10^{-4}} =270.433
+\end{equation}
+
+\section*{b)}
+Le rapport $\frac{N_{de}}{N_{ab}}$ apparaissent, car ils sont directement reliés à la hauteur de la  barrière de potentielle que les électrons doivent traverser. Si on augmente le ratio, les électrons doivent franchir une barrière plus haute et le courant résultant, selon la figure présentée à la page 44 des notes de cours, sera nécessairement plus grand. Le rapport $\frac{D_n}{D_p}$ apparaît, car c'est en partie la mobilité des électrons qui permet un fort gain en courant dans le transistor. Si cette mobilité est trop proche de celle des trous, le gain résultant sera plus faible. Pour que l'effet transistor existe, il faut un courant d'électrons supérieur au courant de trous.
+
+\section*{c)}
+La densité de courant d'électrons diffusant dans la base venant de l'émetteur est donné par:
+\begin{equation}
+\frac{I_b}{S} = \frac{q D_n n_{b0} \mbox{exp}\left(\frac{e V_{be}}{k_B T}\right)}{W}\left[\frac{A}{cm^2}\right]
+\end{equation}
+
+En divisant par la charge élémentaire et en multipliant par 1s, on obtient la densité d'électrons diffusant dans la base venant de l'émetteur (N):
+\begin{equation}
+N = \frac{D_n n_{b0} \mbox{exp}\left(\frac{e V_{be}}{k_B T}\right)}{W} \left[\frac{electrons}{cm^2}\right]
+\end{equation}
+
+On insère les chiffres dans l'équation:
+
+\begin{equation}
+N = \frac{37.5 \cdot \frac{10^{20}}{1.7\times10^{17}}\cdot \mbox{exp}\left(\frac{0.6}{0.026}\right)}{0.8\times10^{-4}} = 2.9018 \times 10^{19} \left[\frac{electron}{cm^2}\right]
+\end{equation}
