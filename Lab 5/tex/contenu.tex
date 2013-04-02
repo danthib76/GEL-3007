@@ -1,0 +1,79 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter*{Question 1}
+\section*{a)}
+Pour répondre à cette question, on utilise l'équation suivante:
+
+\begin{equation}
+V_{Dsat} + V_{bi} - V_G = V_p
+\end{equation}
+
+Où
+\begin{itemize}
+\item $V_{Dsat}$ est la tension de drain de saturation;
+\item $V_{bi}$ est la barrière de potentiel;
+\item $V_G$ est la tension à la grille;
+\item $V_p$ est une constante qui dépend de la configuration;
+\end{itemize}
+
+Si
+\begin{equation}
+-V_p + V_{bi} + V_D \geq V_G
+\end{equation}
+On a alors que le transistor ne conduit pas. On détermine $V_p$ au moyen de l'équation suivante:
+\begin{equation}
+V_p =\frac{qN_d h^2}{2\epsilon}
+\end{equation}
+Où
+\begin{itemize}
+\item q est la charge élémentaire;
+\item $V_{bi}$ est la barrière de potentiel;
+\item $N_d$ est la densité effective d'états des électrons;
+\item h est la hauteur du canal;
+\item $\epsilon$ est la permittivité relative;
+\end{itemize}
+\begin{equation}
+V_p = \frac{q\cdot 0.9\times 10^{23} \cdot \left(0.3\times 10^{-6}\right)^2}{2\cdot 12.9 \cdot \epsilon_0} = 5.681V
+\end{equation}
+
+Avec les données du problème, on trouve que $V_p = 5.681 V$. Il faut donc une tension drain de 1.88 V pour que le transistor se bloque.
+
+\subsection*{b)}
+En utilisant les développements de la question 1a) et en remplaçant $V_d$ par $V_{Dsat}$ on a qu'il faut une tension $V_{Dsat} = 2.88V$
+
+\subsection*{c)}
+On a que le courant de saturation $I_{Dsat}$ est donné par l'équation suivante:
+
+\begin{equation}
+I_{Dsat} = g_0 \left \lbrace V_{Dsat} - \frac{2\left[V_p^{3/2} - (V_{bi}-V_G)^{3/2}\right]}{2V_p^{3/2}}\right\rbrace
+\end{equation}
+
+La constante $g_0$ représente la conductance et est donnée par:
+\begin{equation}
+g_0 = \frac{e \mu_n N_d Zh}{L}
+\end{equation}
+Où
+\begin{itemize}
+\item $e$ est la charge élémentaire;
+\item $\mu_n$ est la mobilité des électrons;
+\item Z est la largeur du canal de conduction;
+\item L est la longueur du canal;
+\end{itemize}
+
+En insérant les valeurs numériques du problème, on obtient: 
+\begin{align}
+I_{Dsat} = &\frac{e\cdot 0.8 \cdot 0.9\times 10^{23} \cdot 150\times 10^{-6} \cdot 0.3\times 10^{-6}}{1.1\times 10^{-6}}\cdot\\ 
+&\left\lbrace 2.88 - \frac{2\left[5.68^{3/2} - (0.8+2)^{3/2}\right]}{3\cdot 5.68^{1/2}}\right\rbrace\\
+&= 0.1906A
+\end{align}
+\subsection*{d)}
+
+Une longueur L plus faible améliore la conductance $g_0$ du transistor et permet ainsi d'obtenir un courant identique avec une tension plus faible.
