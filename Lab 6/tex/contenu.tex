@@ -1,0 +1,135 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter*{Question 1}
+\section*{a)}
+Pour répondre à cette question, on utilise l'équation suivante:
+\begin{equation}
+V_T = V_{fb} + V_S + V_{OX}
+\end{equation}
+On utilise par la suite que:
+\begin{equation}
+Q_S = (4\epsilon_S eN_a \phi_F)^{\frac{1}{2}}
+\end{equation}
+On utilise par la suite que:
+\begin{equation}
+V_{OX} = \frac{Q_S}{V_{OX}}
+\end{equation}
+Où
+\begin{itemize}
+\item $V_T$ est la tension de seuil;
+\item $V_{fb}$ est la tension $V_{flat band}$;
+\item $V_S$ est la hauteur de la barrière de potentiel électrostatique produite par la région de charge d'espace;
+\item $\phi_F$ est le mid-gap point;
+\item $\epsilon_S$ est la permittivité du semiconducteur ($\epsilon_S = \epsilon_R \epsilon_0$);
+\item $e$ est la charge de l'électron;
+\item $N_a$ est la densité d'accepteurs;
+\item $C_{OX}$ est la charge du condensateur en surface;
+\item $Q_S$ est la densité superficielle de charge.
+\end{itemize}
+On utilise par la suite:
+\begin{equation}
+V_{S} = 2\phi_F
+\end{equation}
+On utilise par la suite:
+\begin{equation}
+C_{OX} = \frac{\epsilon_{OX}}{d_{OX}}
+\end{equation}
+Où
+\begin{itemize}
+\item $\epsilon_{OX}$ est la permittivité de la silice;
+\item $d_{OX}$ est l'épaisseur de la couche de silice qui forme le condensateur.
+\end{itemize}
+On utilise par la suite:
+\begin{equation}
+\phi_F = k_{B}T\ln\left(\frac{N_a}{n_i}\right)
+\end{equation}
+Où
+\begin{itemize}
+\item $k_{B}T \approx 0.026$;
+\item $n_i$ est la concentration de paire électrons-trous selon la température.
+\end{itemize}
+On peut ramener le tout en une seule équation:
+\begin{equation}
+V_T = V_{fb} + 2\phi_F + \frac{(4\epsilon_S eN_a \phi_F)^{\frac{1}{2}}}{C_{OX}}
+\end{equation}
+Selon les données du problème, en prenant $V_{fb} = -0.9V$:
+\begin{align}
+V_T &= -0.9 + 2\cdot 0.401 + \frac{1.15276 \times 10^{-3}}{862.88\times 10^{-6}}\\
+V_T &= 1.238V
+\end{align}
+
+\section*{b)}
+On cherche à obtenir $DV_T$ (le changement de la tension seuil), lorsqu'une couche de polysilicium est injectée dans un Mosfet pour produire une mémoire Flash. 
+\begin{equation}
+DV_T = -\frac{Q}{C_{pixel}}
+\end{equation}
+Où
+\begin{itemize}
+\item $Q$ est la charge en électrons pour écrire un bit ;
+\item $C_{pixel}$ est la capacité du condensateur de la couche de polysilicium.
+\end{itemize}
+On utilise l'équation suivante pour $C_{pixel}$:
+\begin{equation}
+C_{pixel} = \frac{\epsilon_R \epsilon_0 (\mbox{Superficie du condensateur})}{d_{flash}}
+\end{equation}
+Où
+\begin{itemize}
+\item $d_{flash}$ est l'épaisseur de la couche de polysilicium.
+\end{itemize}
+On utilise les données du problème:
+\begin{align}
+DV_T &= -\frac{-50000 \cdot 1.6\times 10^{-19}}{(3.9\cdot8.85\times 10^{-12}\cdot 2\times 10^{-6}\cdot 0.8\times 10^{-6})/(20 \times 10^{-9})}\\
+DV_T &= 2.8973 V
+\end{align} 
+
+Pour le décharger il suffit d'appliquer une tension négative de 10V sur la grille de contrôle. CEtte tension produira un champ électrique d'une dizaine de millions de Volt/cm et ainsi, créera le courant d'effet tunnel qui déchargera la grille en quelques millisecondes.
+\chapter*{Question 2}
+
+Le projet qui consiste à transmettre de la puissance sans fil en employant un laser jumelé à un satellite synchrone qui permet de réfléchir le rayon vers une centrale solaire de faible puissance dans un environnement éloigné où une alimentation filaire est difficile. 
+
+\paragraph*{}Afin de procéder avec les calculs, on doit définir l'équation suivante:
+\begin{equation}
+\label{eq0}
+N = \frac{\eta \cos(\phi)P_S}{E} 
+\end{equation}
+\begin{itemize}
+\item Où N est la densité de photons en $\left[\frac{photons}{cm^3 s }\right]$
+\item Où $\eta$ est le rendement de conversion énergétique
+\item Où $\phi$ est l'angle d'incidence en degrés
+\item Où $P_S$ est la densité de puissance du soleil en $\left[\frac{mW}{cm^2}\right]$
+\item Où E est l'énergie moyenne des photons incidents en Joules
+\end{itemize}
+
+\paragraph{}Si on prend en compte un projet pilote de 30 logements, dans lequel on estime la consommation pointe de puissance autour de 5kW. On obtient alors une puissance de 150kW, qui doit correspondre à la puissance effective fournie aux 30 usagers. Si l'on considère un panneau solaire dans lequel un injecte les rayons laser, il est actuellement possible d'obtenir des rendements de l'ordre de 80\% de conversion. Suivant cela, on doit donc fournir $\frac{150}{0.8} = 187.5 \left[kW\right]$ au panneau. Si l'on suppose que le signal incident de l'espace a la même densité d'énergie que le soleil (environ $1\left[\frac{kW}{m^2}\right]$), avec une longueur d'onde minimale de 1.5$\mu m$ (eye safe), on a une énergie moyenne par photon de 826.67meV ou 1.324 $\times 10^{-19} J$. On obtient donc le débit de photons par unité de surface en employant l'équation \ref{eq0} selon le développement suivant:
+
+\begin{equation}
+N = \frac{(0.8 \times 0.1)}{1.324\times 10^{-19}} = 6.04\times 10^{17} \left[\frac{photons}{s cm^2}\right]
+\end{equation}
+
+Si on exploite les données du problème développé à la question 1 du TP3 afin d'obtenir un ordre de grandeur, on suppose une densité de porteurs minoritaires:
+\begin{equation}
+p_n = \frac{6.04\times 10^{17} \cdot 20 \times 10^{-6}}{0.01} = 1.21\times 10^{14}\left[\frac{photons}{cm^3}\right]
+\end{equation}
+
+Toujours avec les données de la question 1, on obtient des niveaux de Fermi de 0.108eV et de:
+\begin{equation}
+E_{Fp} - Ev = 0.026\cdot\ln\left(\frac{1.83\times 10^{19}}{1.21\times 10^{14}}\right) = 0.2503eV
+\end{equation}
+
+On aurait donc un voltage de 1.12- 0.108 - 0.2503 = 0.761 V. Si l'on désire un voltage en circuit ouvert de 310V pour compenser les pertes de conversion ($\approx 10V$) et le point d'opération de la pile ($\approx 80\%$ du voltage maximal) avec le fill factor de 0.65 du problème 1 , on aura donc environ 410 cellules solaires en série. Si un particulier consomme 5kW à 240VAC, on aura donc besoin d'environ 21A en pointe, pour chacune des résidences. Selon le fill factor de 0.65, 21A correspond donc à 80\% du courant effectif, on devra donc dimensionner les panneaux de manière à fournir 26.25A en court circuit. Soit un total d'environ 800A. Avec un débit de $6.04\times 10^{17} \left[\frac{photons}{s cm^2}\right]$ et un courant en court-circuit de 800A, on cherche la surface (en $cm^2$) que doit avoir une cellule:
+\begin{equation}
+S = \frac{800}{6.04\times 10^{17} \cdot 1.602 \times 10^{-19}} = 81 378 cm^2
+\end{equation}
+
+On obtient donc un carré de 2.85m de côté. Avec 410 cellules, on aurait approximativement 3336$m^2$ de panneau solaire, soit environ $57.8m \times 57.8m$. Cette dimension correspond à un demi terrain de football et est physiquement réalisable. La puissance totale théorique serait alors de $800\cdot 310\cdot0.65 = 161kW$, des pertes de transformation de 7\% sont une approximation valable.
+
+\paragraph{}Si on suppose que le satellite possède les mêmes dimensions que les panneaux terrestres, le projet semble physiquement réalisable. 
+\paragraph{}Pour ce qui est du laser émetteur, on considère des pertes de l'ordre de 10\% dans le transport et donc, un rendement total de 70\%. Sachant que l'on dimensionne le panneau pour une puissance de 161kW, il nous faudra un laser de 230kW. La consultation de ressources sur le web nous indique que des lasers à fibre peuvent atteindre des puissances de 20kW et fonctionnent avec la longueur d'onde désirée. Seulement quelques lasers (12) seraient nécessaires pour le projet pilote. 
